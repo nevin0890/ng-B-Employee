@@ -7,14 +7,24 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { ViewemployeeComponent } from './viewemployee/viewemployee.component';
+import { SearchemployeeComponent } from './searchemployee/searchemployee.component';
 
 const routes: Routes = [
+  { path: '', component: AddemployeeComponent },
+  { path: 'view', component: ViewemployeeComponent },
+  { path: 'searchemployee', component: SearchemployeeComponent },
+
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddemployeeComponent,
+    ViewemployeeComponent,
+    SearchemployeeComponent
   ],
   imports: [
     BrowserModule,
